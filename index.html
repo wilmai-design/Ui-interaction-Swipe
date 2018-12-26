@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Wilmai Design">
     <link rel="icon" href="favicon.ico">
-    <title>Home Sitios web Chile</title>
+    <title>User Animations</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -153,13 +153,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
-                                
-                                
-                        
                             </div>
-                        
                         </div>
 
                         </div>
@@ -238,15 +232,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    
-                                    
-                                    
-                            
                                 </div>
-                            
                             </div>
-
                         </div>
 
                       </div>
@@ -520,20 +507,17 @@
                               <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
                             </li>
                           </ul>
-  
                           <!-- contenido de tabs -->
                           <div class="tab-content" id="pills-tabContent">
                           <div class="tab-pane fade show active d-flex justify-content-around flex-wrap tabOrder" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                           <!-- galery 1 tab -->
                           <div class="container gallery-container">
                               <div class="tz-gallery">
-                          
                                   <div class="row">
-                          
                                       <div class="col-sm-6 col-mobile">
                                           <div class="thumbnail itemAnimation">
                                               <a class="lightbox" href="images/imageOrder1.jpg">
-                                                  <img src="images/imageOrder1.jpg"  alt="Park">
+                                                  <img src="images/imageOrder1.jpg" alt="Park">
                                               </a>
                                               <div class="caption">
                                                   <h3>Name</h3>
@@ -597,24 +581,14 @@
                                           </div>
                                       </div>
                                   </div>
-                                  
-                                  
-                                  
-                                  
-                          
                               </div>
-                          
                           </div>
-  
                           </div>
                           <!-- galery 2 tab -->
                           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-  
                               <div class="container gallery-container">
                                   <div class="tz-gallery">
-                              
                                       <div class="row">
-                              
                                           <div class="col-sm-6 col-mobile">
                                               <div class="thumbnail itemAnimation ">
                                                   <a class="lightbox" href="images/imageOrder4.jpg">
@@ -682,17 +656,9 @@
                                               </div>
                                           </div>
                                       </div>
-                                      
-                                      
-                                      
-                                      
-                              
                                   </div>
-                              
                               </div>
-  
                           </div>
-  
                         </div>
                         <!-- Fin contenedor de todo el tab -->
                     </div>
@@ -732,14 +698,11 @@
                 <picture class="wrapperUser">
                   <img src="images/imgUser1.jpg" class="imgUser" alt="User1">
                 </picture>
-                
               </div>
               <!-- Card user carrusel -->
       </div>
     </div>
   </div>
-
-    <!-- Slick js -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="components/slick/slick.min.js"></script>
     <script type="text/javascript">
@@ -760,83 +723,17 @@
             }
           ]
         });
-      
-
-        // scroll show goTop
-          var bodyClass = document.body.classList;
-          window.addEventListener('scroll', function(){
-            var top = this.scrollY;
-            if( top < 500 ) {
-              bodyClass.remove('showGoTop');
-            }else{
-              bodyClass.add('showGoTop');
-            }
-          });
-
-
-
-          // goTop
-          $('.go-top').on('click', function(){
-            $('html, body').animate({'scrollTop': 0});
-          });
-
-          $(".imgUser").click(function(){
-            $( ".wrapperUser" ).removeClass( "clickActive" );
-            $( ".personalInformation" ).removeClass( "clickActiveInformation" );
-            $( ".btnFollow" ).removeClass("btnInerActive");
-            $( ".slick-slide .wrapperUser" ).removeClass("hideOtherImg");
-            $( ".containerThingsUser" ).removeClass("ThingsUserActive");
-            $( ".boxSlide" ).removeClass("boxSlideActive");
-            baguetteBox.destroy('.tz-gallery');
-            $("img").click(function(){
-              event.preventDefault();
-              
-            });
-          });
-          
-          
-         // var userActive = false;
-          $( ".tab-content" ).click(function() {
-           // $(".lightbox").click(function(){
-           //   event.preventDefault();
-              
-           // });
-           
-
-          
-            
-            $( ".wrapperUser" ).addClass( "clickActive" );
-            $( ".personalInformation" ).addClass( "clickActiveInformation" );
-            $( ".btnFollow" ).addClass("btnInerActive");
-            $( ".slick-slide .wrapperUser" ).addClass("hideOtherImg");
-            $( ".containerThingsUser" ).addClass("ThingsUserActive");
-            $( ".boxSlide" ).addClass("boxSlideActive");
-            baguetteBox.run('.tz-gallery');
-          
-            $(".tab-content img").unbind();
-            //click(function(){
-              //event.preventDefault();
-              
-            //});
-            
-
-           
-            //$(".personalInformation").animate({right:"-12px"},3000);
-
-            //$("#User1").animate({
-              //    position: "absolute",
-                //  right: "64%"
-              //}, 1000);
-
-            //$('.personalInformation').animate({
-              //    right:"-12px"
-             // }, 1000);
-
+        $( ".fa-smile-wink" ).click(function() {
+            $( ".wrapperUser" ).toggleClass( "clickActive" );
+            $( ".personalInformation" ).toggleClass( "clickActiveInformation" );
+            $( ".btnFollow" ).toggleClass("btnInerActive");
+            $( ".slick-slide .wrapperUser" ).toggleClass("hideOtherImg");
+            $( ".containerThingsUser" ).toggleClass("ThingsUserActive");
+            $( ".boxSlide" ).toggleClass("boxSlideActive");
           });
 
           $('.carousel').on('swipe', function(event, slick, direction){
               console.log(direction);
-              // left
               if (direction == 'left'){
                 console.log("salio left");
                 $(".itemAnimation").removeClass("fadeLeft fadeRight");
@@ -848,17 +745,10 @@
               }
 
             });
-
-            
-
+            baguetteBox.run('.tz-gallery');
       });
- 
-         
     </script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    
+    <script src="js/bootstrap.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-
   </body>
 </html>
